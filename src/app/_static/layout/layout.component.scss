@@ -1,0 +1,10 @@
+@import 'sizes';
+
+.sidenav {
+    width: $sidebar-size;
+}
+
+.dynamic-content-wrapper {
+    margin: $margin-space;
+    margin-bottom: calc(#{$margin-space + $footer-size});
+}

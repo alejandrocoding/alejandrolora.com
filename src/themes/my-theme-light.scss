@@ -1,0 +1,13 @@
+@import '~@angular/material/theming';
+
+$primary-light: mat-palette($mat-grey, 200, 500, 300);
+$accent-light:  mat-palette($mat-brown, 200);
+$warn-light:    mat-palette($mat-deep-orange, 200);
+$theme-light:   mat-light-theme($primary-light, $accent-light, $warn-light);
+
+@import '_all-styled-components.scss';
+
+.my-theme-light {
+    @include angular-material-theme($theme-light);
+    @include sidebar-color-styles($theme-light);
+  }

@@ -1,0 +1,25 @@
+<mat-toolbar color="primary">
+  <button mat-icon-button (click)="toogleSidenav()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span i18n class="title" (click)="toogleSidenav()">Alejandro Lora</span>
+  <span class="spacer"></span>
+
+  <button mat-icon-button [matMenuTriggerFor]="languageMenu">
+    <mat-icon>language</mat-icon>
+  </button>
+  <mat-menu #languageMenu="matMenu">
+    <button mat-menu-item *ngFor="let language of languages" (click)="changeLanguage(language.code)">
+      <span>{{ language.name }}</span>
+    </button>
+  </mat-menu>
+
+  <button mat-icon-button [matMenuTriggerFor]="themeMenu">
+    <mat-icon>color_lens</mat-icon>
+  </button>
+  <mat-menu #themeMenu="matMenu">
+    <button mat-menu-item *ngFor="let theme of themes" (click)="changeTheme(theme.class)">
+      <span>{{ theme.name }}</span>
+    </button>
+  </mat-menu>
+</mat-toolbar>

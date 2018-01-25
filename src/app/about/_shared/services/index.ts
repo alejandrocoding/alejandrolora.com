@@ -1,0 +1,1 @@
+export * from './about-i18n.service';
