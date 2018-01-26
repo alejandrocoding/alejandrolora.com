@@ -24,8 +24,11 @@
       "@services/*": [
         "app/_common/services/*"
       ],
-      "@entities/*": [
-        "app/_common/entities/*"
+      "@interfaces/*": [
+        "app/_common/interfaces/*"
+      ],
+      "@models/*": [
+        "app/_common/models/*"
       ]
     },
     "outDir": "./dist/out-tsc",

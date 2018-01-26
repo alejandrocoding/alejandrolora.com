@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
-import { ITheme, ILanguage } from '@entities/index';
+import { ITheme, ILanguage } from '@interfaces/index';
 import { ThemeService } from '@services/index';
 import { HeaderI18NService } from './header-i18n.service';
 

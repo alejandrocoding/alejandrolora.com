@@ -1,0 +1,20 @@
+.item {
+  padding: 25px 0;
+  .header-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .card-image {
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+@media (min-width: 600px) {
+  .item {
+    padding: 25px 15px;
+  }
+}

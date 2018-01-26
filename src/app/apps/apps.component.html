@@ -1,5 +1,28 @@
 <h1 i18n class="page-title">Apps</h1>
 
+<div class="container" fxLayout="row" fxLayoutWrap>
+
+  <div class="item" fxFlex.lg="25" fxFlex.lt-lg="50" fxFlex.xs="100" *ngFor="let app of apps">
+    <mat-card class="card">
+      <mat-card-header>
+        <div class="header-image" [style.background-image]="satinazeImage(app.icon)" mat-card-avatar></div>
+        <mat-card-title>{{ app.title }}</mat-card-title>
+        <mat-card-subtitle>{{ app.subtitle }}</mat-card-subtitle>
+      </mat-card-header>
+      <div class="card-image" [style.background-image]="satinazeImage(app.image)" mat-card-image></div>
+      <mat-card-content>
+        <p>
+          {{ app.description }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <a mat-button target="_blank" href="{{app.link}}">See more</a>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+
+</div>
+
 <button class="fab" mat-fab color="accent">
   <mat-icon>favorite</mat-icon>
 </button>
