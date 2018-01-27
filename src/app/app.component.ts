@@ -1,5 +1,5 @@
 import { Component, OnInit, Renderer2 } from '@angular/core';
-import { ThemeService } from '@services/index';
+import { RestoreDBService, ThemeService } from '@services/index';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,14 @@ import { ThemeService } from '@services/index';
 
 export class AppComponent implements OnInit {
 
-  constructor(private _themeService: ThemeService, private _renderer: Renderer2) { }
+  constructor(
+    private _restoreDBService: RestoreDBService,
+    private _themeService: ThemeService,
+    private _renderer: Renderer2) { }
 
   ngOnInit() {
     this.subscribeToThemeChanges();
+    // this.restoreDB();
   }
 
   private subscribeToThemeChanges() {
@@ -19,6 +23,10 @@ export class AppComponent implements OnInit {
       this._renderer.removeClass(document.body, document.body.className);
       this._renderer.addClass(document.body, theme);
     });
+  }
+
+  protected restoreDB() {
+    this._restoreDBService.restoreDB();
   }
 
 }

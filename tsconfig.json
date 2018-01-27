@@ -29,6 +29,9 @@
       ],
       "@models/*": [
         "app/_common/models/*"
+      ],
+      "@enums/*": [
+        "app/_common/enums/*"
       ]
     },
     "outDir": "./dist/out-tsc",

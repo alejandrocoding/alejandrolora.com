@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+$primary-red: mat-palette($mat-red, 700, 300, 900);
+$accent-red:  mat-palette($mat-indigo, A400);
+$warn-red:    mat-palette($mat-indigo, A400);
+$theme-red:   mat-light-theme($primary-red, $accent-red, $warn-red);
+
+
+@import '_all-styled-components.scss';
+
+.my-theme-red {
+  @include angular-material-theme($theme-red);
+  @include sidebar-color-styles($theme-red);
+}
