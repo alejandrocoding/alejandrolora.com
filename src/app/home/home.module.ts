@@ -2,16 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { UIFrameworkModule } from '@modules/ui-framework.module';
-import { BackstageRoutingModule } from './backstage-routing.module';
+import { HomeRoutingModule } from './home-routing.module';
 
-import { BackstageComponent } from './backstage.component';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   imports: [
     CommonModule,
     UIFrameworkModule,
-    BackstageRoutingModule
+    HomeRoutingModule
   ],
-  declarations: [BackstageComponent]
+  declarations: [HomeComponent]
 })
-export class BackstageModule { }
+export class HomeModule { }

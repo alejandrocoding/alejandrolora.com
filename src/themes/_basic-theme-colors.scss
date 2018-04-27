@@ -1,0 +1,22 @@
+@mixin basic($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, accent);
+  $foreground: map-get($theme, foreground);
+  $background: map-get($theme, background);
+
+  .text-primary { color: mat-color($primary); }
+  .text-accent { color: mat-color($accent); }
+  .text-warn { color: mat-color($warn); }
+
+  .text-primary-contrast { color: mat-color($primary, default-contrast);  }
+  .text-accent-contrast { color: mat-color($accent, default-contrast); }
+  .text-warn-contrast { color: mat-color($warn, default-contrast); }
+
+  .bg-primary { background-color: mat-color($primary); }
+  .bg-accent { background-color: mat-color($accent); }
+  .bg-warn { background-color: mat-color($warn); }
+
+  ::selection { background: mat-color($accent, 100); }
+  ::-moz-selection { background: mat-color($accent); }
+}

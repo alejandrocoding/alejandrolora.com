@@ -5,10 +5,11 @@ $accent-dark:  mat-palette($mat-green, A200);
 $warn-dark:    mat-palette($mat-red, A200);
 $theme-dark:   mat-dark-theme($primary-dark, $accent-dark, $warn-dark);
 
-
+@import '_basic-theme-colors.scss';
 @import '_all-styled-components.scss';
 
 .my-theme-dark {
   @include angular-material-theme($theme-dark);
+  @include basic($theme-dark);
   @include sidebar-color-styles($theme-dark);
 }

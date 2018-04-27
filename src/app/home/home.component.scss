@@ -1,0 +1,49 @@
+@import '_variables';
+
+.wrapper {
+  .title {
+    font-size: $title-big;
+    margin-top: 20vh;
+    font-weight: 100;
+    span {
+      display: block;
+    }
+  }
+  .subtitle {
+    font-size: $subtitle-big;
+    font-weight: 100;
+    opacity: 0.5;
+    span {
+      letter-spacing: 0.4em;
+    }
+  }
+  .contact-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-top: 10vh;
+    .contact-list-item {
+      margin: auto 15px;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 40vw;
+    height: 65vh;
+    background-image: url(/assets/img/angular.svg);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(0.98) rotate(20deg);
+    animation: angular-move 10s infinite;
+  }
+}
+
+@keyframes angular-move {
+  0% {transform: scale(0.98) rotate(20deg);}
+  50% {transform: scale(1.02) rotate(22deg);}
+  100% {transform: scale(0.98) rotate(20deg);}
+}

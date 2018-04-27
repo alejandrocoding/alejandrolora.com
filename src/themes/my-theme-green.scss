@@ -5,10 +5,11 @@ $accent-green:  mat-palette($mat-amber, A200);
 $warn-green:    mat-palette($mat-amber, A200);
 $theme-green:   mat-dark-theme($primary-green, $accent-green, $warn-green);
 
-
+@import '_basic-theme-colors.scss';
 @import '_all-styled-components.scss';
 
 .my-theme-green {
   @include angular-material-theme($theme-green);
+  @include basic($theme-green);
   @include sidebar-color-styles($theme-green);
 }

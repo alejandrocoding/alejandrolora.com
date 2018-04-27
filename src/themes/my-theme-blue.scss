@@ -5,10 +5,11 @@ $accent-blue:  mat-palette($mat-deep-orange, A400);
 $warn-blue:    mat-palette($mat-deep-orange, A400);
 $theme-blue:   mat-light-theme($primary-blue, $accent-blue, $warn-blue);
 
-
+@import '_basic-theme-colors.scss';
 @import '_all-styled-components.scss';
 
 .my-theme-blue {
   @include angular-material-theme($theme-blue);
+  @include basic($theme-blue);
   @include sidebar-color-styles($theme-blue);
 }

@@ -5,10 +5,11 @@ $accent-red:  mat-palette($mat-indigo, A400);
 $warn-red:    mat-palette($mat-indigo, A400);
 $theme-red:   mat-light-theme($primary-red, $accent-red, $warn-red);
 
-
+@import '_basic-theme-colors.scss';
 @import '_all-styled-components.scss';
 
 .my-theme-red {
   @include angular-material-theme($theme-red);
+  @include basic($theme-red);
   @include sidebar-color-styles($theme-red);
 }
