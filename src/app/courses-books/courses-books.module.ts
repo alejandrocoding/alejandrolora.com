@@ -3,17 +3,17 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 import { UIFrameworkModule } from '@modules/ui-framework.module';
-import { SettingsRoutingModule } from './settings-routing.module';
+import { CoursesBooksRoutingModule } from './courses-books-routing.module';
 
-import { SettingsComponent } from './settings.component';
+import { CoursesBooksComponent } from './courses-books.component';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     UIFrameworkModule,
-    SettingsRoutingModule
+    CoursesBooksRoutingModule
   ],
-  declarations: [SettingsComponent]
+  declarations: [CoursesBooksComponent]
 })
-export class SettingsModule { }
+export class CoursesBooksModule { }
