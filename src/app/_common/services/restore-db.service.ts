@@ -10,19 +10,8 @@ export class RestoreDBService {
   constructor(private _angularFirestore: AngularFirestore) { }
 
   restoreDB() {
-    this.importAllTables();
-  }
-
-  private importAllTables() {
-    this.importAboutTable();
     this.importAppsTable();
-    this.importBackstageTable();
-    this.importBlogTable();
-    this.importContactTable();
-    this.importSettingsTable();
   }
-
-  private importAboutTable() { }
 
   private importAppsTable() {
     const collection: AngularFirestoreCollection<IApp> = this._angularFirestore.collection(DBTableEnum.Apps);
@@ -42,13 +31,5 @@ export class RestoreDBService {
 
     apps.forEach((app) => collection.add(app));
   }
-
-  private importBackstageTable() { }
-
-  private importBlogTable() { }
-
-  private importContactTable() { }
-
-  private importSettingsTable() { }
 
 }
