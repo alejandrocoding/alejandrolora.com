@@ -5,12 +5,14 @@
 }
 
 .dynamic-content-wrapper {
-    margin: $margin-space;
-    margin-bottom: calc(#{$margin-space + $footer-size});
+    padding: $padding-space;
+    padding-bottom: 50px;
+    min-height: calc(100vh - (#{$header-size} + #{$footer-size}));
+    box-sizing: border-box;
 }
 
 @media (max-width: 550px) {
   .dynamic-content-wrapper {
-    margin-bottom: 15px;
+    padding-bottom: 25px;
   }
 }
