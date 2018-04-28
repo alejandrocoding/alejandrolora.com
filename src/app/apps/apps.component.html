@@ -7,7 +7,7 @@
     <mat-divider></mat-divider>
   </div>
   <div class="item" fxFlex.gt-md="25" fxFlex.md="33" fxFlex.sm="50" fxFlex.xs="100" *ngFor="let app of apps | filterByCategory:angularCategory | sortByNumber">
-    <mat-card class="card">
+    <mat-card class="card" (mouseover)="addHoverClass($event)" (mouseout)="removeHoverClass($event)">
       <mat-card-header>
         <div class="header-image" [style.background-image]="satinazeImage(app.icon)" mat-card-avatar></div>
         <mat-card-title>{{ app.title }}</mat-card-title>
@@ -20,7 +20,8 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-button target="_blank" href="{{app.link}}">See app</a>
+        <a mat-raised-button color="accent" target="_blank" href="{{app.link}}">See app</a>
+        <a mat-button target="_blank" href="{{app.codeLink}}">See code</a>
       </mat-card-actions>
     </mat-card>
   </div>
@@ -43,7 +44,8 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-button target="_blank" href="{{app.link}}">See app</a>
+        <a mat-raised-button color="accent" target="_blank" href="{{app.link}}">See app</a>
+        <a mat-button target="_blank" href="{{app.codeLink}}">See code</a>
       </mat-card-actions>
     </mat-card>
   </div>
@@ -67,7 +69,8 @@
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <a mat-button target="_blank" href="{{app.link}}">See app</a>
+        <a mat-raised-button color="accent" target="_blank" href="{{app.link}}">See app</a>
+        <a mat-button target="_blank" href="{{app.codeLink}}">See code</a>
       </mat-card-actions>
     </mat-card>
   </div>

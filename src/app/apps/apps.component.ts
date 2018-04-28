@@ -19,6 +19,8 @@ export class AppsComponent implements OnInit, OnDestroy {
   javaCategory = AppCategoryEnum.ANDROID_JAVA;
   kotlinCategory = AppCategoryEnum.ANDROID_KOTLIN;
 
+  cardHoverClass = 'mat-elevation-z8';
+
   constructor(
     private _restoreDBService: RestoreDBService,
     private _appsService: AppsService,
@@ -39,6 +41,14 @@ export class AppsComponent implements OnInit, OnDestroy {
 
   satinazeImage(link: string) {
     return this._sanitizer.bypassSecurityTrustStyle(`url(${link})`);
+  }
+
+  addHoverClass(event: any) {
+    event.currentTarget.classList.add(this.cardHoverClass);
+  }
+
+  removeHoverClass(event: any) {
+    event.currentTarget.classList.remove(this.cardHoverClass);
   }
 
   private restoreDB() {

@@ -4,7 +4,7 @@ import { IApp } from '@app/apps/_shared';
 @Pipe({ name: 'sortByNumber' })
 export class SortByNumberPipe implements PipeTransform {
 
-  transform(apps: IApp[]): any[] {
+  transform(apps: IApp[]): IApp[] {
     if (!apps) {
       return apps;
     }

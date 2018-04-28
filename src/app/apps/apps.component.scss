@@ -10,6 +10,13 @@
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
+    max-width: 100%;
+    margin: 16px auto;
+    transition: .15s transform ease-out;
+    &:hover {
+      transform: scale(1.1);
+      transition: .25s transform ease-in;
+    }
   }
 }
 

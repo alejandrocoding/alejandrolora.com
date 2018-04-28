@@ -1,0 +1,44 @@
+.item {
+  padding: 25px 0;
+  .header-image {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .card-image {
+    height: 300px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    max-width: 100%;
+    margin: 16px auto;
+    transition: .15s transform ease-out;
+    &:hover {
+      transform: scale(1.1);
+      transition: .25s transform ease-in;
+    }
+  }
+}
+
+.title-separator {
+  padding: 0 15px;
+  h4 {
+    margin: 0;
+    line-height: 3em;
+  }
+}
+
+.role {
+  position: absolute;
+  right: -20px;
+  top: 25px;
+  transform: rotate(45deg);
+  font-size: 14px;
+  padding: 5px 25px;
+}
+
+@media (min-width: 600px) {
+  .item {
+    padding: 25px 15px;
+  }
+}
