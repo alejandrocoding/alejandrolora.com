@@ -8,3 +8,9 @@
     margin: $margin-space;
     margin-bottom: calc(#{$margin-space + $footer-size});
 }
+
+@media (max-width: 550px) {
+  .dynamic-content-wrapper {
+    margin-bottom: 15px;
+  }
+}

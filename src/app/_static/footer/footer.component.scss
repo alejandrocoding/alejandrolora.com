@@ -9,3 +9,9 @@
     text-align: center;
     font-size: 12px;
 }
+
+@media (max-width: 550px) {
+  :host {
+    position: relative;
+  }
+}

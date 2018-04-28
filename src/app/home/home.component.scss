@@ -13,6 +13,7 @@
     font-size: $subtitle-big;
     font-weight: 100;
     opacity: 0.5;
+    margin-top: -25px;
     span {
       letter-spacing: 0.4em;
     }
@@ -24,6 +25,29 @@
     margin-top: 10vh;
     .contact-list-item {
       margin: auto 15px;
+      &.portrait {
+        margin: 0;
+        margin: 10px auto;
+      }
+      .fa {
+        position: relative;
+        margin-right: 5px;
+        font-size: 21px;
+        &.gh {
+          top: -2px;
+        }
+        &.so {
+          top: -3px;
+          font-size: 19px;
+        }
+        &.tw {
+          top: -2px;
+        }
+        &.lk {
+          top: -2px;
+          font-size: 19px;
+        }
+      }
     }
   }
 
@@ -39,6 +63,7 @@
     background-repeat: no-repeat;
     transform: scale(0.98) rotate(20deg);
     animation: angular-move 10s infinite;
+    z-index: -10;
   }
 }
 
@@ -46,4 +71,55 @@
   0% {transform: scale(0.98) rotate(20deg);}
   50% {transform: scale(1.02) rotate(22deg);}
   100% {transform: scale(0.98) rotate(20deg);}
+}
+
+
+@media (max-width: 959px) {
+  .wrapper {
+    .title, .subtitle {
+      text-align: center;
+    }
+    &::after {
+      left: 50vw;
+      width: 50vw;
+      height: 50vw;
+      opacity: 0.2;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+  .wrapper {
+    max-width: 100%;
+    overflow-x: hidden;
+    .title, .subtitle {
+      text-align: left;
+    }
+    .title {
+      font-size: $title-big-xs;
+      line-height: 1.5em;
+    }
+    .subtitle {
+      font-size: $subtitle-big-xs;
+      margin-top: -10px;
+    }
+    &::after {
+      top: 5%;
+      width: 70vw;
+      left: 20vw;
+      height: 45vh;
+      opacity: 0.2;
+      animation: none;
+    }
+  }
+  .fab {
+    position: sticky;
+    bottom: 25px;
+    float: right;
+    margin-bottom: 15px;
+  }
 }

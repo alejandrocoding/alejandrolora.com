@@ -5,7 +5,7 @@
   <span i18n class="title" (click)="toogleSidenav()">Alejandro's portfolio</span>
   <span class="spacer"></span>
 
-  <button mat-icon-button [matMenuTriggerFor]="languageMenu">
+  <button mat-icon-button [matMenuTriggerFor]="languageMenu" matTooltip="Languages">
     <mat-icon>language</mat-icon>
   </button>
   <mat-menu #languageMenu="matMenu">
@@ -14,7 +14,7 @@
     </button>
   </mat-menu>
 
-  <button mat-icon-button [matMenuTriggerFor]="themeMenu">
+  <button mat-icon-button [matMenuTriggerFor]="themeMenu" matTooltip="Themes">
     <mat-icon>color_lens</mat-icon>
   </button>
   <mat-menu #themeMenu="matMenu">

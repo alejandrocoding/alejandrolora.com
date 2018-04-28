@@ -12,27 +12,39 @@
     </h3>
   </div>
 
-  <!-- <img class="angular" src="../../assets/img/angular.svg"> -->
-
   <div fxFlex>
-    <ul class="contact-list" fxLayout="row" fxLayoutAlign="center center">
-      <li class="contact-list-item">
-        <a mat-raised-button color="accent" href="https://github.com/ialex90/" target="_blank">GitHub</a>
+    <ul class="contact-list" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center">
+      <li class="contact-list-item" ngClass.lt-md="portrait">
+        <a mat-raised-button color="accent" href="https://github.com/ialex90/" target="_blank">
+          <i class="gh fa fa-github"></i>
+          GitHub
+        </a>
       </li>
-      <li class="contact-list-item">
+      <li class="contact-list-item" ngClass.lt-md="portrait">
         <a mat-raised-button color="accent" href="https://stackoverflow.com/users/4775350/alejandro-lora/"
-          target="_blank">StackOverflow</a>
+          target="_blank">
+          <i class="so fa fa-stack-overflow"></i>
+          StackOverflow
+        </a>
       </li>
-      <li class="contact-list-item">
-        <a mat-raised-button color="accent" href="https://twitter.com/alexpc_/" target="_blank">Twitter</a>
+      <li class="contact-list-item" ngClass.lt-md="portrait">
+        <a mat-raised-button color="accent" href="https://twitter.com/alexpc_/" target="_blank">
+          <i class="tw fa fa-twitter"></i>
+          Twitter
+        </a>
       </li>
-      <li class="contact-list-item">
+      <li class="contact-list-item" ngClass.lt-md="portrait">
         <a mat-raised-button color="accent" href="https://www.linkedin.com/in/alejandrolora/"
-          target="_blank">LinkedIn</a>
+          target="_blank">
+          <i class="lk fa fa-linkedin"></i>
+          LinkedIn
+        </a>
       </li>
     </ul>
   </div>
 
-  <a class="fab" mat-fab color="accent" href="mailto:alejandrofpo@gmail.com">
-    <mat-icon>send</mat-icon>
-  </a>
+</div>
+
+<a class="fab" mat-fab color="accent" href="mailto:alejandrofpo@gmail.com" matTooltip="Email me!">
+  <mat-icon>send</mat-icon>
+</a>
