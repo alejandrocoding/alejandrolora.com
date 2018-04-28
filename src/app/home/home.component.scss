@@ -89,17 +89,12 @@
 }
 
 @media (max-width: 550px) {
-  html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
   .wrapper {
-    max-width: 100%;
-    overflow-x: hidden;
     .title, .subtitle {
       text-align: left;
     }
     .title {
+      margin-top: 25vh;
       font-size: $title-big-xs;
       line-height: 1.5em;
     }
@@ -107,10 +102,13 @@
       font-size: $subtitle-big-xs;
       margin-top: -10px;
     }
+    .contact-list {
+      margin-top: 5vh;
+    }
     &::after {
-      top: 5%;
+      top: 3%;
       width: 70vw;
-      left: 20vw;
+      left: 15vw;
       height: 45vh;
       opacity: 0.2;
       animation: none;
@@ -120,6 +118,7 @@
     position: sticky;
     bottom: 25px;
     float: right;
+    margin-top: -45px;
     margin-bottom: 15px;
   }
 }
