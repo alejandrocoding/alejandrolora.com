@@ -1,9 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-
-import { IApp } from './_shared/interfaces/IApp';
-import { AppsService } from './_shared/services/apps.service';
 import { Subscription } from 'rxjs/Subscription';
+
+import { RestoreDBService } from '@services/index';
+import { IApp, AppCategoryEnum, AppsService } from './_shared/index';
 
 @Component({
   selector: 'app-apps',
@@ -15,12 +15,22 @@ export class AppsComponent implements OnInit, OnDestroy {
   apps: IApp[];
   appsSub: Subscription;
 
+  angularCategory = AppCategoryEnum.ANGULAR;
+  javaCategory = AppCategoryEnum.ANDROID_JAVA;
+  kotlinCategory = AppCategoryEnum.ANDROID_KOTLIN;
+
   constructor(
+    private _restoreDBService: RestoreDBService,
     private _appsService: AppsService,
     private _sanitizer: DomSanitizer) { }
 
   ngOnInit() {
-    this.appsSub = this._appsService.getAll().subscribe((apps) => this.apps = apps);
+    this.appsSub = this._appsService.getAll().subscribe((apps) => {
+      this.apps = apps;
+      if (!this.apps.length) {
+        this.restoreDB();
+      }
+    });
   }
 
   ngOnDestroy() {
@@ -29,6 +39,10 @@ export class AppsComponent implements OnInit, OnDestroy {
 
   satinazeImage(link: string) {
     return this._sanitizer.bypassSecurityTrustStyle(`url(${link})`);
+  }
+
+  private restoreDB() {
+    this._restoreDBService.restoreDB();
   }
 
 }

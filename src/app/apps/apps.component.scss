@@ -13,6 +13,14 @@
   }
 }
 
+.title-separator {
+  padding: 0 15px;
+  h4 {
+    margin: 0;
+    line-height: 3em;
+  }
+}
+
 @media (min-width: 600px) {
   .item {
     padding: 25px 15px;
