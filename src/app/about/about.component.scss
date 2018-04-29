@@ -1,0 +1,34 @@
+article {
+  margin: 25px auto;
+  .text {
+    letter-spacing: 1px;
+    text-align: justify;
+  }
+  .udemy {
+    max-height: 50px;
+  }
+  .angular {
+    max-height: 180px;
+  }
+  .gdg {
+    max-height: 150px;
+  }
+  .banner-box {
+    .banner-img {
+      max-width: 80px;
+      max-height: 80px;
+    }
+  }
+}
+
+@media (max-width: 959px) {
+  article {
+    .img {
+      width: 50%;
+      margin: 0 auto;
+    }
+    .udemy {
+      margin: 50px auto;
+    }
+  }
+}

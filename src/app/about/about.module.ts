@@ -7,8 +7,6 @@ import { AboutRoutingModule } from './about-routing.module';
 
 import { AboutComponent } from './about.component';
 
-import { AboutI18NService } from './_shared/index';
-
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +14,6 @@ import { AboutI18NService } from './_shared/index';
     UIFrameworkModule,
     AboutRoutingModule
   ],
-  declarations: [AboutComponent],
-  providers: [AboutI18NService]
+  declarations: [AboutComponent]
 })
 export class AboutModule { }
