@@ -1,0 +1,14 @@
+name: CI - test
+on:
+  repository_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout by SHA
+      uses: actions/checkout@v2
+      with:
+        ref: {{ github.event.client_payload.sha }}
+    - run: echo {{ github.event.client_payload.sha }}
+    - run: echo {{ github.event.event_type }}
