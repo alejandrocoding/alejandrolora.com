@@ -8,6 +8,7 @@ jobs:
     steps:
     - name: Checkout by SHA
       uses: actions/checkout@v2
-    - run: echo {{ github.event.client_payload }}
-    - run: echo {{ github.event.client_payload.sha }}
-    - run: echo {{ github.event.event_type }}
+      with:
+        ref: ${{ github.event.client_payload.sha }}
+    - run: echo ${{ github.event.client_payload.sha }}
+    - run: echo ${{ github.event.event_type }}
