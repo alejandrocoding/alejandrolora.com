@@ -2,26 +2,26 @@ name: CI - test
 on:
   repository_dispatch
 
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Checkout by SHA
-#       uses: actions/checkout@v2
-#       with:
-#         ref: ${{ github.event.client_payload.sha }}
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout by SHA
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.event.client_payload.sha }}
       
-#     - name: Deploy DEV
-#       if: github.event.client_payload.event_type == 'deploy-dev'
-#       ###: <add steps to deploy your project>
-#       run: echo 'Deploying DEV... Well done!'
+    - name: Deploy DEV
+      if: github.event.client_payload.event_type == 'deploy-dev'
+      ###: <add steps to deploy your project>
+      run: echo 'Deploying DEV... Well done!'
 
-#     - name: Deploy QA
-#       if: github.event.client_payload.event_type == 'deploy-qa'
-#       ###: <add steps to deploy your project>
-#       run: echo 'Deploying QA... Well done!'
+    - name: Deploy QA
+      if: github.event.client_payload.event_type == 'deploy-qa'
+      ###: <add steps to deploy your project>
+      run: echo 'Deploying QA... Well done!'
 
-#     - name: Deploy PROD
-#       if: github.event.client_payload.event_type == 'deploy-prod'
-#       ###: <add steps to deploy your project>
-#       run: echo 'Deploying PRODUCTION... Well done!'
+    - name: Deploy PROD
+      if: github.event.client_payload.event_type == 'deploy-prod'
+      ###: <add steps to deploy your project>
+      run: echo 'Deploying PRODUCTION... Well done!'
