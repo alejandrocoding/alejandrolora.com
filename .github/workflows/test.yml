@@ -10,5 +10,18 @@ jobs:
       uses: actions/checkout@v2
       with:
         ref: ${{ github.event.client_payload.sha }}
-    - run: echo ${{ github.event.client_payload.sha }}
-    - run: echo ${{ github.event.client_payload.event_type }}
+      
+    - name: Deploy DEV
+      if: github.event.client_payload.event_type === 'deploy-dev'
+      ###: <add steps to deploy your project>
+      run: echo 'Deploying DEV... Well done!'
+
+    - name: Deploy QA
+      if: github.event.client_payload.event_type === 'deploy-qa'
+      ###: <add steps to deploy your project>
+      run: echo 'Deploying QA... Well done!'
+
+    - name: Deploy PROD
+      if: github.event.client_payload.event_type === 'deploy-prod'
+      ###: <add steps to deploy your project>
+      run: echo 'Deploying PRODUCTION... Well done!'
